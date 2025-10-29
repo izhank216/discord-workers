@@ -21,7 +21,7 @@ Import the library directly from your Cloudflare Pages URL:
 ## Example
 
 
-`const bot = new DiscordBot(BOT_TOKEN, { intents: ['GUILDS', 'GUILD_MESSAGES'] })
+```const bot = new DiscordBot(BOT_TOKEN, { intents: ['GUILDS', 'GUILD_MESSAGES'] })```
 
 bot.on('ready', () => console.log(`Logged in as ${bot.user.username}`))
 
@@ -35,7 +35,7 @@ await registerSlashCommands(BOT_TOKEN, [
   { name: 'ping', description: 'Check latency', type: 1 }
 ], 'YOUR_GUILD_ID')
 
-await bot.listen()`
+await bot.listen()```
 
 
 ```js
