@@ -47,9 +47,3 @@ await registerSlashCommands(BOT_TOKEN, [
 ], 'YOUR_GUILD_ID')`
 
 await bot.listen()
-
-
-
-
-
-
