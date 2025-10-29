@@ -18,29 +18,29 @@ Build fully serverless Discord bots with slash commands and message handling —
 
 Import the library directly from your Cloudflare Pages URL:
 
+``import { DiscordBot, registerSlashCommands } from 'https://discord-workers.pages.dev/discord.workers-1.0.0.js'``
+
+
+
+
 ## Example
 
 
-```const bot = new DiscordBot(BOT_TOKEN, { intents: ['GUILDS', 'GUILD_MESSAGES'] })```
+`const bot = new DiscordBot(BOT_TOKEN, { intents: ['GUILDS', 'GUILD_MESSAGES'] })`
 
-bot.on('ready', () => console.log(`Logged in as ${bot.user.username}`))
+`bot.on('ready', () => console.log(`Logged in as ${bot.user.username}`))`
 
-bot.on('messageCreate', msg => {
+`bot.on('messageCreate', msg => {
   if (msg.content === '!ping') msg.reply('🏓 Pong!')
-})
+})`
 
-// Register slash commands (optional)
-await registerSlashCommands(BOT_TOKEN, [
+`// Register slash commands (optional)`
+`await registerSlashCommands(BOT_TOKEN, [
   { name: 'hello', description: 'Say hi!', type: 1 },
   { name: 'ping', description: 'Check latency', type: 1 }
-], 'YOUR_GUILD_ID')
+], 'YOUR_GUILD_ID')`
 
-await bot.listen()```
-
-
-```js
-import { DiscordBot, registerSlashCommands } from 'https://discord-workers.pages.dev/discord.workers-1.0.0.js'
-
+`await bot.listen()`
 
 
 
