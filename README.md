@@ -41,8 +41,8 @@ If your bot doesn’t support RPC natively, you can still use setRichPresence di
 ## Activity Types
 
 **Type**                  
-
                             **Meaning**
+                            
 - 0                         Playing
 - 1	                        Streaming
 - 2	                        Listening
