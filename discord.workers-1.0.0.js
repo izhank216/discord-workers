@@ -7,6 +7,9 @@ import { setRichPresence } from './botrpc.js'
 
 export { setRichPresence }
 
+// Handle command errors internally
+import { handleError } from './error/error.js'
+
 export class DiscordBot {
   constructor(token, options = {}) {
     this.token = token
