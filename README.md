@@ -42,7 +42,7 @@ If your bot doesn’t support RPC natively, you can still use setRichPresence di
 
 **Type**    **Meaning**
 
-0	         Playing
+0          Playing
 1	         Streaming
 2	         Listening
 3	         Watching
