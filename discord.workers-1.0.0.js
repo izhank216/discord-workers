@@ -10,6 +10,12 @@ export { setRichPresence }
 // Handle command errors internally
 import { handleError } from './error/error.js'
 
+// Check the token first if its missing or not set
+import { checkToken } from './error/tokenmissing.js'
+
+// Detect token at startup
+checkToken(BOT_TOKEN)
+
 export class DiscordBot {
   constructor(token, options = {}) {
     this.token = token
