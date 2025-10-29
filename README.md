@@ -18,11 +18,6 @@ Build fully serverless Discord bots with slash commands and message handling —
 
 Import the library directly from your Cloudflare Pages URL:
 
-
-```js
-import { DiscordBot, registerSlashCommands } from 'https://discord-workers.pages.dev/discord.workers-1.0.0.js'
-
-
 ## Example
 
 
@@ -41,6 +36,13 @@ await registerSlashCommands(BOT_TOKEN, [
 ], 'YOUR_GUILD_ID')
 
 await bot.listen()`
+
+
+```js
+import { DiscordBot, registerSlashCommands } from 'https://discord-workers.pages.dev/discord.workers-1.0.0.js'
+
+
+
 
 
 ## Notes
