@@ -19,13 +19,18 @@ Build fully serverless Discord bots with slash commands and message handling —
 Import the library directly from your Cloudflare Pages URL:
 
 ``import { DiscordBot, registerSlashCommands } from 'https://discord-workers.pages.dev/discord.workers-1.0.0.js'``
+Note: If you are not using slash commands, you can skip calling registerSlashCommands entirely. Your bot will still work with message events and replies.
 
+## Notes
+- Requires Wrangler v4+ if you use Workers
+- Slash commands can be global or guild-specific
+- Fully serverless, no Node.js needed
 
 
 
 ## Example
 
-
+```js
 const bot = new DiscordBot(BOT_TOKEN, { intents: ['GUILDS', 'GUILD_MESSAGES'] })`
 
 bot.on('ready', () => console.log(`Logged in as ${bot.user.username}`))`
@@ -45,9 +50,5 @@ await bot.listen()
 
 
 
-## Notes
-- Requires Wrangler v4+ if you use Workers
-- Slash commands can be global or guild-specific
-- Fully serverless, no Node.js needed
 
 
