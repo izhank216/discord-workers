@@ -3,6 +3,10 @@ import { registerSlashCommands } from './register.js'
 
 export { registerSlashCommands }
 
+import { setRichPresence } from './botrpc.js'
+
+export { setRichPresence }
+
 export class DiscordBot {
   constructor(token, options = {}) {
     this.token = token
