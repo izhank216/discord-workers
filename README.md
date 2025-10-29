@@ -19,8 +19,9 @@ Build fully serverless Discord bots with slash commands and message handling —
 Import the library directly from your Cloudflare Pages URL:
 
 
-```jsimport { DiscordBot, registerSlashCommands } from 'https://discord-workers.pages.dev/discord.workers-1.0.0.js
-Note: If you are not using slash commands, you can skip calling registerSlashCommands entirely. Your bot will still work with message events and replies.
+
+```js
+import { DiscordBot, registerSlashCommands } from 'https://discord-workers.pages.dev/discord.workers-1.0.0.js'
 
 ## Example
 import { DiscordBot, registerSlashCommands } from 'https://discord-workers.pages.dev/discord.workers-1.0.0.js'
