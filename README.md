@@ -27,7 +27,28 @@ Note: If you are not using slash commands, you can skip calling registerSlashCom
 - Slash commands can be global or guild-specific
 - Fully serverless, no Node.js needed
 
+## Rich Presence / RPC
 
+discord.workers includes a setRichPresence function to set your bot’s rich presence.
+
+Automatically uses your bot’s username as the activity name if none is provided.
+
+If your bot doesn’t support RPC natively, you can still use setRichPresence directly from the import.
+
+## Importing
+`import { setRichPresence } from 'https://discord-workers.pages.dev/discord.workers-1.0.0.js'`
+
+## Activity Types
+**Type**	 **Meaning**
+0	         Playing
+1	         Streaming
+2	         Listening
+3	          Watching
+4           Custom Status
+5	          Competing
+
+## Example usage:
+`setRichPresence(bot, { type: 1, name: "Streaming Fun" })`
 
 ## Example
 
